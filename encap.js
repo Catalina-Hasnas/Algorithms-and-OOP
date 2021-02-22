@@ -1,8 +1,8 @@
 class User {
-    static #totalOnline = 0;
+    static totalOnline = 0; // class variable
     static #usersArray = [];
-    static formatTotal() {
-        return this.#totalOnline + " users currently online";
+    static formatTotal() { // class method
+        return this.totalOnline + " users currently online";
     }
     static formatTotalUsers() {
         var usersArray = this.#usersArray;
@@ -26,7 +26,7 @@ class User {
 
     logIn() {
         if(!this.#loggedIn) {
-            User.#totalOnline++;
+            User.totalOnline++;
             this.#loggedIn = true;
             User.#usersArray.push(this.#userName);
         }
@@ -34,7 +34,7 @@ class User {
 
     logOut() {
         if(this.#loggedIn) {
-            User.#totalOnline--;
+            User.totalOnline--;
             this.#loggedIn = false;
             var usersArray = User.#usersArray;
             var index = usersArray.findIndex( (el) => el===this.#userName );
@@ -66,6 +66,6 @@ Catalina.logOut();
 console.log(User.formatTotal());
 console.log(User.formatTotalUsers());
 
-
+console.log(User.totalOnline);
 
 // console.log(Catalina.#email);

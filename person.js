@@ -49,7 +49,7 @@ class Person extends IContact {
     constructor(name, email, address = "") {
         super();
         this.name = name;
-        this.emailObj = new Email(email) 
+        this.emailObj = new Email(email); 
         this.address = address;
     }
 

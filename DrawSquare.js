@@ -37,7 +37,7 @@ function drawLine(n, symbol) {
     console.log(str);
 }
 
-drawLine(4, "@");
+// drawLine(4, "@");
 
 function drawSpace(n, str) {
     var s = n-2;

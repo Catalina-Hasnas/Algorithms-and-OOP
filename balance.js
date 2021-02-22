@@ -1,7 +1,7 @@
 class Balance {
-    #balance = 0.0;
+    #balance = 0.0; // instance variable
 
-    static transferFunds(from, to, amount) {
+    static transferFunds(from, to, amount) { //static(class) method
         if(amount > 0 &&
             from instanceof Balance &&
             to instanceof Balance) {
@@ -24,7 +24,7 @@ class Balance {
         return this.#balance + "$";
     }
 
-    addMoney(amount) {
+    addMoney(amount) { // instance method
         if(amount > 0) {
             this.#balance += amount;
         }
@@ -63,3 +63,4 @@ console.log();
 console.log(myBalance.balance);
 console.log();
 console.log(yourBalance.balance);
+console.log(Balance.balance)
