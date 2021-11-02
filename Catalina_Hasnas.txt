@@ -1,0 +1,63 @@
+*Full Name : Catalina Hasnas
+*Phone: 
+*Email: catalinahasnas1996@gmail.com
+
+*University: Babes-Bolyai University
+*Department: Administrative Sciences
+*Graduated(yes/no):   Yes         Year of study: 2015-2018                Year of Graduation: 2018
+
+ 
+
+Test responses: 
+
+1. Polymorphism is a principle that allows you to call the same method on different Objects. It is implemented by overriding or overloading. 
+It is called overriding when the method is called with the same name and parameters in the child class, as well as parent class.
+It is called overloading when the method is called with the same name, but different parameters.
+
+
+2. Composition in OOP defines a “has a” relationship, instead of a “is one”. It means that a Person Object has access to a place to store an Email Object, thus making it a “has a” relationship. 
+
+3. An abstract class is a class that can’t be called with the keyword “new” and the abstract methods it contains MUST be overridden by the child class. Therefore, it doesn’t support multiple inheritance. It can have a constructor, it can have private/ public/ static methods and properties. 
+An interface represents a set of methods and properties that classes need to have in order to be considered it. For example: A person needs to have a name and a surname, and a method breath(); in order to be considered a person.
+An interface doesn’t have a constructor and doesn’t contain any values, and only has the name of the methods and the type of parameters/ proprieties. 
+
+
+4. function rotateArrToLeft(arr) {
+    var temp = [];
+
+    for (var i = 0; i<arr.length - 1; i++) {
+        temp[i] = arr[i+1];
+    }
+    temp[i] = arr[0];
+    return temp;
+}
+
+function rotateArrToLeftNTimes(arr, n) {
+    newArr = arr;
+    while (n--) {
+        newArr = rotateArrToLeft(newArr)
+    }
+    return newArr
+}
+
+console.log(rotateArrToLeftNTimes([1,2,3,4,5,6], 2));
+
+5. function checkSubstring(str1, str2) {
+    for (var i = 0; i<str1.length; i++) {
+        var j = i;
+        
+        for (j = i; j<str2.length + 1; j++) {
+            var result = true;
+            if (str1[i + j] !== str2[j]) {
+                result = false;
+            }
+        }
+        if (result) {
+            return true
+        } 
+    }
+    return false
+}
+
+console.log(checkSubstring("carpet", "pet"));
+console.log(checkSubstring("candidate", "car"));
